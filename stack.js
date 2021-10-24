@@ -1,4 +1,4 @@
-const MAX_SIZE = 2;
+const MAX_SIZE = 15;
 
 class Stack {
     constructor() {
@@ -45,5 +45,11 @@ const stack = new Stack();
 
 
 // Reverse a string using stack data structure
-// const string = 'Hello world';
+const str = 'Hello World!'
+let reverseString = '';
 
+for (let i = 0, length = str.length; i < length; i++) stack.push(str.charAt(i));
+while(!stack.isEmpty()) reverseString += stack.pop();
+
+console.log(reverseString)
+// output !dlroW olleH
